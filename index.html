@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Jura">
+    <link href='https://fonts.googleapis.com/css?family=Monoton|Codystar' rel='stylesheet' type='text/css'>
+    
+    <script type="text/javascript" src="js/Peristasi.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Eleganza.css">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Caos</title>
+</head>
+
+<body onload="teseo()"> 
+    <div class="page-slider">
+    <header>
+        <label for="slide-1-trigger">Home</label>
+        <label for="slide-2-trigger">Info</label>
+        <label for="slide-3-trigger">Simulatore</label>
+    </header>
+    <input id="slide-1-trigger" type="radio" name="slides" checked>
+    <section class="slide slide-one">
+        <video autoplay loop poster="polina.jpg" id="bgvid">
+        <source src="Media/Home.mp4" type="video/mp4">
+        </video>
+    </section>
+    <input id="slide-2-trigger" type="radio" name="slides">
+    <section class="slide slide-two">
+        <p id="cit" style="font: 20px Jura">"E loro dissero sia fatto l'HTML, e HTML fu..."</p>
+        <img src="Media/Creatori.png" alt="Creatori" style="width:90%">
+    </section>
+    <input id="slide-3-trigger" type="radio" name="slides">
+    <section class="slide slide-three"> 
+            <table width="95%" padding="5%" height="136px" id="input">
+                <tr>
+
+                    <td width="33.33%" align="center"><canvas id="cerchio1" width="136" height="136"></canvas></td>
+
+                    <td width="33.33%" align="center"><canvas id="cerchio2" width="136" height="136"></canvas></td>
+
+                    <td width="33.33%" align="center"><canvas id="cerchio3" width="136" height="136"></canvas></td>
+                    
+                    
+                </tr>
+                    
+                <tr>
+                    <td width="33.33%" align=”center”><input id= "dati1" orient="vertical" type="range" min="0" max="200" step="1" value="100" onchange="spero(document.getElementById('cerchio1').width, document.getElementById('cerchio1'), document.getElementById('dati1').value, document.getElementById('dati1').max), Inizializzazione()"/></td>
+                    <td width="33.33%" align=”center”><input id= "dati2" orient="vertical" type="range" min="0" max="200" step="1" value="100" onchange="spero(document.getElementById('cerchio2').width, document.getElementById('cerchio2'), document.getElementById('dati2').value, document.getElementById('dati2').max), Inizializzazione()"/></td>
+                    <td width="33.33%" align=”center”><input id= "dati3" orient="vertical" type="range" min="1" max="11" step="0.1" value="5" onchange="spero(document.getElementById('cerchio3').width, document.getElementById('cerchio3'), document.getElementById('dati3').value, document.getElementById('dati3').max), Inizializzazione()"/></td> 
+                </tr> 
+                
+                <tr>
+                    <td width="33.33%" align=”center”>Numero Particelle:</td>
+                    <td width="33.33%" align=”center”>Numero Passi:</td>
+                    <td width="33.33%" align=”center”>Lungh. Passi Max:</td>   
+                </tr>
+            </table>
+         <p/>
+    <div id="rer"><canvas id="canvas" width="1380" height="420"></canvas></div>
+
+
+    </section>
+    </div>
+</body>
+</html>
